@@ -1,3 +1,4 @@
+# Walkthrough: how to push to github
 
 ## Create a local repository
 
@@ -35,7 +36,7 @@ Enter file in which to save the key (/home/yuval/.ssh/id_ed25519): /home/yuval/.
 
 You can read about the ssh agent [here](https://levelup.gitconnected.com/ssh-agent-explained-cf947034e63d).  
 
-**eval "$(ssh-agent -s)"**
+**eval "$(ssh-agent -s)"**  
 **ssh-add ~/.ssh/yuvalaws1_all**
 
 ## Add the public key to github
