@@ -88,3 +88,30 @@ git branch -r
 ```
 git branch -r -v
 ```
+
+## Updating info 
+
+- Go to b/demo and look for branches:
+```
+cd ../../b/demo/
+git branch -a
+```
+You should see no brances at all.
+- You can update by using the **git fetch** command:
+```
+$> git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 438 bytes | 438.00 KiB/s, done.
+From github.com:YuvalShaul/demo
+ * [new branch]      feature1   -> origin/feature1
+ * [new branch]      feature2   -> origin/feature2
+ ```
+ - Let's look that the branches that were updated:
+ ```
+$> git branch -a
+  remotes/origin/feature1
+  remotes/origin/feature2
+```
