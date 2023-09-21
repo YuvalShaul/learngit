@@ -115,3 +115,26 @@ $> git branch -a
   remotes/origin/feature1
   remotes/origin/feature2
 ```
+- Try looking at the log of these remote branches:
+```
+git log remotes/origin/feature1
+git log remotes/origin/feature2
+```
+- Create a local branch to track the remote one.  
+See the results:
+```
+git checkout -b feature1 origin/feature1
+git status
+ls
+```
+Note that you have switched to the new local branch and that everything is updated.
+- Now, let's do the same thing differently:
+```
+git branch newbr origin/feature2
+git branch -a
+git checkout newbr 
+ls
+```
+Note:  
+We have created a new branch, set it to track a remote one (where names do not match).  
+Checking out to the new local branch shows the created files.
