@@ -50,3 +50,29 @@ git add file3.txt
 git commit -m "adding file3.txt to feature1 in b"
 git fetch
 ```
+
+## Looking at the changes in b
+
+- A **git status** will show me the following:
+```
+git status
+On branch feature1
+Your branch and 'origin/feature1' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+```
+- Using **git pull** and editing the comment I merged the missing commit into b:
+```
+git pull
+```
+- but this is not the end of it.  
+Doing **git status** again will show the problem:  
+Now b has information that is not updated to a (and to github).  
+A **git push** will solve this.
+
+## Looking at the changes in a
+
+- The only thing left to do is in a local repository
+- Do **git fetch** first to see, them **git pull** to merge
