@@ -21,6 +21,7 @@ clone <your repository url>
 cd ../b/
 clone <your repository url>
 ```
+
 ## Brance feature1
 
 - Goto your demo repository in **a**, and check git status:
@@ -29,7 +30,8 @@ cd ../a/demo
 git status
 ```
 - As you can see, you are in the master branch.  
-Go ahead and create a new branch and switch to it.  
+In fact, there are no branches created realy, so if you try **git branch** you'll see no branches (so master is just a default name to use if you just commit without creating a new branch).
+- Go ahead and create a new branch and switch to it.  
 Then create a file, add, commit and try to push:
 ```
 git checkout -b feature1
@@ -44,6 +46,7 @@ To push the current branch and set the remote as upstream, use
 
     git push --set-upstream origin feature1
 ```
+so we are not tracking a remote branch.
 
 ## Tracking a remote branch
 
@@ -58,4 +61,30 @@ Type:
 ```
 git branch -vv
 ```
+- Let's repeat everything with another branch called feature2:
+```
+git checkout -b feature2
+echo hello > feature2.txt
+git add feature2.txt 
+git commit -m "first commit for feature2"
+git push --set-upstream origin feature2
+```
 
+## Remote Branches
+
+- Use the follwing command to inspect all remotes:
+```
+git remote -v show
+```
+- Try the following to see ALL branches (including remote branches):
+```
+git branch -a
+```
+- Try this to see only remote branches:
+```
+git branch -r
+```
+- Add **-v** to see more details:
+```
+git branch -r -v
+```
