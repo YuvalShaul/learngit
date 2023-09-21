@@ -45,17 +45,17 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin feature1
 ```
 
-osboxes@osboxes:~/Documents/workgit/a/demo$ git push --set-upstream origin feature1
-Enumerating objects: 3, done.
-Counting objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To github.com:YuvalShaul/demo.git
- * [new branch]      feature1 -> feature1
-Branch 'feature1' set up to track remote branch 'feature1' from 'origin'.
-osboxes@osboxes:~/Documents/workgit/a/demo$ 
-osboxes@osboxes:~/Documents/workgit/a/demo$ 
-osboxes@osboxes:~/Documents/workgit/a/demo$ git branch -vv
-* feature1 2d7600d [origin/feature1] creating feature 1
-osboxes@osboxes:~/Documents/workgit/a/demo$ 
+## Tracking a remote branch
+
+- The push command has many options, but if these are not configured then the current branch is pushed to the corresponding upstream branch.  
+The problem is that we don't have a current upstream branch, so we have to create one.  
+We'll push using the suggested upstream configuration:
+```
+git push --set-upstream origin feature1
+```
+- Now we can see how are local feature1 branch tracks the remote one.
+Type:
+```
+git branch -vv
+```
 
