@@ -45,7 +45,7 @@ git branch feature2
 ```
 - Now switch to the new branch:
 ```
-git checkout feature1
+git checkout feature2
 ```
 - Create a second file called feature2.txt.  
 Edit feature1.txt and add a new line.
