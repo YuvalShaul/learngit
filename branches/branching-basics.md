@@ -21,13 +21,14 @@ git branch
 
 ## Branches
 
-- You could not create a new branch unless the HEAD already points to some commit.  It means that the **master** branch that you see as output of the **git status** command is just a name that will be given to the branch that will be created when you create the first commit.
-- Create-and-switch-to a new branch called feature1.  
+- You could **not** create a new branch unless the HEAD already points to some commit.  
+It means that the **master** branch that you see (when using **git status**) is just a name that will be given to the branch that will be created when you create the first commit.
+- Create (and switch-to) a new branch called feature1.  
 ```
 git checkout -b feature1
 ```
-- Again, since no commit was created, no branch was really created.  
-Use the following to make sure you understand what happened:
+- Again, since no commit was created, this branch was **not** really created.  
+Use the following commands to make sure you understand what happened:
 ```
 git branch
 git status
@@ -46,7 +47,35 @@ git branch feature2
 ```
 git checkout feature1
 ```
-
-
+- Create a second file called feature2.txt.  
+Edit feature1.txt and add a new line.
+Add both files and commit. 
+```
+echo hello > feature2.txt
+vi feature1.txt
+git add feature1.txt feature2.txt 
+git status
+git commit -m "adding a new file and adding a line to old file (in branch feature2)"
+```
 
 ## Merging
+
+- Checkout to feature1 branch and see that feature2 changes disappeared.
+```
+git checkout feature1
+ls
+cat feature1.txt
+```
+- Merge branch feature2 into the current branch(feature1):
+```
+git merge feature1
+```
+- Inspect:
+  - what is the current branch
+  - what files and content you see
+- Inspect each branch log:
+```
+git log
+git log feature2
+git log feature1
+```
