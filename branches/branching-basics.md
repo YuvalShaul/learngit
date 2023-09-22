@@ -12,7 +12,7 @@ git init
 ```
 git status
 ```
-- Verify that the master branch there does not really ewxist:
+- Verify that the master branch there does not really exist:
 ```
 git branch
 ```
@@ -68,7 +68,7 @@ cat feature1.txt
 ```
 - Merge branch feature2 into the current branch(feature1):
 ```
-git merge feature1
+git merge feature2
 ```
 - Inspect:
   - what is the current branch
